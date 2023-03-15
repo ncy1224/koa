@@ -3,7 +3,7 @@ class UserController{
         ctx.body="注册成功"
     }
     async login(ctx, next){
-        console.log(ctx);
+        console.log(ctx.request.body);
         ctx.body="登录成功"
     }
 }
