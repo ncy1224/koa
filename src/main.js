@@ -1,11 +1,9 @@
 const Koa = require("koa");
 
+const { APP_PORT } = require("./config/config.default")
+
 const app = new Koa();
 
-app.use((ctx, next)=> {
-    ctx.body="hello world"
-})
-
-app.listen("8080", ()=>{
-    console.log("listening port 8080");
+app.listen(APP_PORT, ()=>{
+    console.log(`listening port ${APP_PORT}`);
 })
