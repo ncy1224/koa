@@ -12,6 +12,12 @@ class UserService{
         })
         return res ? res.dataValues : null;
     }
+    async updatePassword(obj,whereOpt){
+        const res = await User.update(obj, {
+            where: whereOpt
+        })
+        return !!res[0]
+    }
 }
 
 module.exports= new UserService();
